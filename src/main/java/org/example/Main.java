@@ -60,9 +60,9 @@ public class Main {
                 .withObjectMapper(objectMapper)
                 .build(dbConnection.getMongoClient(), "ztp", "groupCollection", TaskComponent.class, UuidRepresentation.STANDARD);
 
-//        loadData(groupCollection);
+        loadData(groupCollection);
 
-        TaskGroup group = findTaskGroup(groupCollection, "Grupa 3");
+        TaskGroup group = findTaskGroup(groupCollection, "Grupa 2");
 
         if (group != null) {
             group.display("");
